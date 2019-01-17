@@ -10,7 +10,34 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-       
+         <script>
+             function check()
+             {
+                  var c=document.getElementById("MN");
+                  var c1=document.getElementById("c");
+                  var c1=document.getElementById("c1");
+                  var c1=document.getElementById("c2");
+                  var c1=document.getElementById("c3");
+                  var c1=document.getElementById("c4");
+                if(c.value=="")
+                {
+                    alert(" MOBILE NUMBER Is Required");
+                    MN.focus();
+                    return false;
+                }
+                else if(c.value.length<10)
+                {
+                    alert(" MOBILE NUMBER Is INCORRECT");
+                    MN.focus();
+                    return false;
+                }
+                else if (c.value=="" || c1.value=""|| c2.value="" || c3.value="" || c4.value="")
+                {
+                      alert(" Fields Cannot be Empty");
+                    return false;
+                }
+             }
+             </script>
         
         <style>
             
@@ -35,19 +62,19 @@ and open the template in the editor.
          <div class="container" >
            
         <h1>Mobile Data</h1>
-        <form class="form-group" action="ReceiveDataServlet1" method="post">
+        <form class="form-group" action="ReceiveDataServlet1" method="post" onsubmit=" return check()">
             Mobile  Number:
-            <input class="form-control" type="text" name="Mobile"><br>
+            <input class="form-control" type="text" name="Mobile" id="MN"><br>
             Mobile Make:
-            <input class="form-control" type="text" name="MobileMake"><br>
+            <input class="form-control" type="text" name="MobileMake" id="c"><br>
             Mobile Model:
-            <input class="form-control" type="text" name="MobileModel"><br>
+            <input class="form-control" type="text" name="MobileModel" id="c1"><br>
             Problem Statement:
-            <input type="text" class="form-control" name="ProblemStatement"><br>
+            <input type="text" class="form-control" name="ProblemStatement" id="c2"><br>
              Submission Day/Time:
-            <input type="text" class="form-control" name="SubmissionDateTime"><br>
+            <input type="text" class="form-control" name="SubmissionDateTime" id="c3"><br>
             Charges:
-            <input type="text" class="form-control" name="Charges"><br>
+            <input type="text" class="form-control" name="Charges" id="c4"><br>
             <br>
             <input type="submit" class="btn btn-secondary" value="Save">
         </form>
