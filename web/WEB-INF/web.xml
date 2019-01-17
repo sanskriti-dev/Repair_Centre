@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>CustomerDataServlet</servlet-name>
+        <servlet-class>d1.CustomerDataServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CustomerDataServlet1</servlet-name>
+        <servlet-class>d1.CustomerDataServlet1</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MobileDataServlet1</servlet-name>
+        <servlet-class>d1.MobileDataServlet1</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ReceiveDataServlet1</servlet-name>
+        <servlet-class>d1.ReceiveDataServlet1</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CustomerDataServlet</servlet-name>
+        <url-pattern>/CustomerDataServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CustomerDataServlet1</servlet-name>
+        <url-pattern>/CustomerDataServlet1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MobileDataServlet1</servlet-name>
+        <url-pattern>/MobileDataServlet1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ReceiveDataServlet1</servlet-name>
+        <url-pattern>/ReceiveDataServlet1</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>

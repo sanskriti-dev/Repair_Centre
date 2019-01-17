@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <script>
+            function check()
+            {
+                var c=document.getElementById("CustomerName");
+                  var c1=document.getElementById("Email");
+                     var c2=document.getElementById("Mobile");
+                if(c.value==""||c1.value==""||c2.value=="")
+                {
+                    alert(" Customer Name Is Required");
+                    CustomerName.focus();
+                    return false;
+                }
+                else if (c1.value=="")
+                {
+                      alert(" Email Is Required");
+                    Email.focus();
+                    return false;
+                }
+                
+                
+                      else if (c2.value=="" || c2.value.length<10)
+                {
+                      alert(" Mobile Is Incorrect");
+                    Mobile.focus();
+                    return false;
+                }
+            }
+        </script>
+        <style>
+             
+            body{
+                background-color: DARKGREY ;
+                color : white;
+                color:black;
+            }
+            .container{
+                background-color:LIGHTGREY;
+                border-radius:10px;
+                padding: 7% 3% ;
+                margin: 10% auto;
+                width : 35%;
+                /*color:white;*/
+                 
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="container" >
+            
+        <h1>Customer Data</h1>
+        <br>
+        <form class="form-group" action="CustomerDataServlet1" method="post" onsubmit="return check()">
+         Customer Name:<br>
+         <input class="form-control" type="text" name="CustomerName" id="CustomerName"><br>
+         Email:<br>
+         <input class="form-control" type="text" name="Email" id="Email"><br>
+         Mobile Number:<br>
+          <input class="form-control" type="text" name="Mobile" id="Mobile"><br>
+          <input class="" type="radio" name="Gender" value="male" checked> Male
+          <input class="" type="radio" name="Gender" value="female"> Female
+          <input class="" type="radio" name="Gender" value="other"> Trans
+          <br>
+         <br>
+        <input class="btn btn-secondary" type="submit" value="Save">
+        </form>
+         </div>
+    </body>
+</html>
